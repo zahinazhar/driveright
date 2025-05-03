@@ -155,7 +155,7 @@ const translations = {
 
         "vocational1": "Pendaftaran Kursus",
         "vocational2": "Lesen Vokasional",
-        "gdl1": "Bagi pemegang lesen E sila hubungi untuk maklumat lanjut.",
+        "gdl1": "Bagi pemegang lesen E sila hubungi kami untuk maklumat lanjut.",
 
 
         "lorry1": "Pendaftaran Kursus",
