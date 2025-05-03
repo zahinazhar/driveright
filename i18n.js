@@ -181,7 +181,7 @@ const translations = {
         "yourName": "Nama Anda",
         "yourEmail": "Emel Anda",
         "yourPhone": "Telefon Anda",
-        "selectPackage": "Pilih Pakej",
+        "selectPackage": "Pilih Kelas",
         "basicOption": "Asas",
         "standardOption": "Standard",
         "premiumOption": "Premium",
