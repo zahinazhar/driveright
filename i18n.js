@@ -56,7 +56,7 @@ const translations = {
 
         "vocational1": "Course Registration",
         "vocational2": "Vocational License",
-        "gdl": "For E license holder please contact for more information.",
+        "gdl1": "For E license holder please contact for more information.",
 
         "lorry1": "Course Registration",
         "lorry2": "Driving Learning Class",
@@ -155,7 +155,7 @@ const translations = {
 
         "vocational1": "Pendaftaran Kursus",
         "vocational2": "Lesen Vokasional",
-        "gdl": "Bagi pemegang lesen E sila hubungi untuk maklumat lanjut.",
+        "gdl1": "Bagi pemegang lesen E sila hubungi untuk maklumat lanjut.",
 
 
         "lorry1": "Pendaftaran Kursus",
