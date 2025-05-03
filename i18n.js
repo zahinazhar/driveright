@@ -35,7 +35,7 @@ const translations = {
         "step4Text": "We accompany you to the final steps to ensure you receive your license successfully.",
         
         // Pricing
-        "affordablePackages": "Packages",
+        "affordablePackages": "License Class",
         "b2": "B2",
         "bfull": "B Full",
         "d": "D (Manual)",
@@ -134,7 +134,7 @@ const translations = {
         "step4Text": "Kami menemani anda ke langkah terakhir untuk memastikan anda menerima lesen dengan jayanya.",
         
         // Pricing
-        "affordablePackages": "Pakej",
+        "affordablePackages": "Kelas Lesen",
         "b2": "B2",
         "bfull": "B Penuh",
         "d": "D (Manual)",
