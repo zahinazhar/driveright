@@ -41,7 +41,7 @@
             </div>
             <div class="hero-image">
                 <!--<img src="https://images.unsplash.com/photo-1502224562085-639556652f33?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Happy driver with license">-->
-                <img src="Poster Zahin English-01-01.png" alt="Happy driver with license">
+                <img src="C:\Users\Syahafidz\Desktop\Zahin\Poster Zahin English-01-01.png" alt="Happy driver with license">
 
             </div>
         </div>
@@ -248,21 +248,39 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <form action="https://formspree.io/f/xblogkno" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" data-i18n-placeholder="yourName" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Your Phone" data-i18n-placeholder="yourPhone">
-                    </div>
-                    <div class="form-group">
-                        <input type="option" placeholder="Class" data-i18n-placeholder="yourClass">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" data-i18n-placeholder="yourMessage"></textarea>
-                    </div>
-                    <button type="submit" class="cta-button" data-i18n="submitApplication">Submit Application</button>
-                </form>
+                <form   action="https://formspree.io/f/xblogkno" method="POST" class="contact-form">
+    <!-- Name -->
+    <div class="form-group">
+        <input type="text" name="full_name" placeholder="Your Name" data-i18n-placeholder="yourName" required>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+        <input type="tel" name="phone" placeholder="Your Phone" data-i18n-placeholder="yourPhone">
+    </div>
+    
+    <!-- Package Selection -->
+    <div class="form-group">
+        <select name="package">
+            <option value="" data-i18n="selectPackage">Select a Package</option>
+            <option value="b2" data-i18n="b2">Basic</option>
+            <option value="bfull" data-i18n="bfull">Standard</option>
+            <option value="d" data-i18n="d">Premium</option>
+            <option value="da" data-i18n="da">Premium</option>
+            <option value="ekejur" data-i18n="ekejur">Premium</option>
+            <option value="esendi" data-i18n="esendi">Premium</option>
+            <option value="psv" data-i18n="psv">Premium</option>
+            <option value="gdl" data-i18n="gdl">Premium</option>
+        </select>
+    </div>
+    
+    <!-- Message -->
+    <div class="form-group">
+        <textarea name="message" placeholder="Your Message" data-i18n-placeholder="yourMessage"></textarea>
+    </div>
+    
+    <button type="submit" class="cta-button" data-i18n="submitApplication">Submit Application</button>
+</form>
 		<div id="form-status" style="display: none; margin-top: 20px;"></div>
             </div>
         </div>
