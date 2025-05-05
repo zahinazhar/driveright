@@ -653,7 +653,7 @@ footer {
 /* PRICE CARD SELECTION VISUAL FEEDBACK */
 /* =================================== */
 
-/* Highlight selected card */
+/* Highlight selected card 
 .price-card.selected {
   border: 2px solid var(--secondary-color);
   box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
@@ -679,4 +679,4 @@ footer {
 /* Maintain popular badge visibility */
 .price-card.popular.selected {
   border-color: var(--accent-color);
-}
+} */
