@@ -647,3 +647,36 @@ footer {
         display: none;
     }
 }
+
+
+/* =================================== */
+/* PRICE CARD SELECTION VISUAL FEEDBACK */
+/* =================================== */
+
+/* Highlight selected card */
+.price-card.selected {
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Smooth transition for visual feedback */
+.price-card {
+  transition: all 0.3s ease;
+}
+
+/* Optional: Pulse animation on selection */
+@keyframes pulse {
+  0% { transform: translateY(-5px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(-5px); }
+}
+
+.price-card.selected {
+  animation: pulse 1.5s ease infinite;
+}
+
+/* Maintain popular badge visibility */
+.price-card.popular.selected {
+  border-color: var(--accent-color);
+}
