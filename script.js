@@ -100,3 +100,44 @@ form.addEventListener('submit', async (e) => {
         }
     });
 });
+
+
+// ==============================================
+// AUTO-SELECT PACKAGE IN FORM (NEW FUNCTIONALITY)
+// ==============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 1. Auto-select package when clicking pricing cards
+  document.querySelectorAll('.price-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      // Skip if clicking directly on a link/button
+      if (e.target.closest('a, button')) return;
+      
+      const packageType = this.dataset.package;
+      const select = document.getElementById('package-select');
+      
+      if (select) {
+        select.value = packageType;
+        highlightSelectedCard(this);
+      }
+    });
+  });
+
+  // 2. Make "Choose" buttons work
+  document.querySelectorAll('.price-card a').forEach(button => {
+    button.addEventListener('click', function(e) {
+      const packageType = this.closest('.price-card').dataset.package;
+      const select = document.getElementById('package-select');
+      
+      if (select) select.value = packageType;
+    });
+  });
+
+  // 3. Optional: Highlight selected card
+  function highlightSelectedCard(selectedCard) {
+    document.querySelectorAll('.price-card').forEach(card => {
+      card.classList.remove('selected');
+    });
+    selectedCard.classList.add('selected');
+  }
+});
