@@ -692,3 +692,11 @@ footer {
   color: var(--secondary-color);
   transform: scale(1.05);
 }
+
+.hero-image img {
+  transition: opacity 0.3s ease;
+}
+
+.hero-image img.fade-out {
+  opacity: 0;
+}
