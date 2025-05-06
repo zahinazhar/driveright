@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ======================
   // 3. PACKAGE SELECTION
   // ======================
-  document.querySelectorAll('.price-card').forEach(card => {
+  /*document.querySelectorAll('.price-card').forEach(card => {
     card.addEventListener('click', function(e) {
       // Don't trigger if clicking directly on a link
       if (e.target.closest('a, button')) return;
@@ -61,7 +61,25 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.add('selected');
       }
     });
+  });*/
+
+  document.querySelectorAll('.price-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const packageType = this.dataset.package;
+    const select = document.getElementById('package-select');
+    
+    if (select) {
+      select.value = packageType;
+      
+      // Highlight selected card
+      document.querySelectorAll('.price-card').forEach(c => {
+        c.classList.remove('selected');
+      });
+      this.classList.add('selected');
+    }
   });
+});
+
 
   // ======================
   // 4. TESTIMONIAL CAROUSEL
