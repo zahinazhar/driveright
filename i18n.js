@@ -44,6 +44,9 @@ const translations = {
         "esendi": "E (Articulated Lorry)",
         "psv": "PSV - Public Service Vehicle",
         "gdl": "GDL - Goods Driving License",
+        "motor": "Motorcycle",
+        "car": "Motorcar",
+        "lorry": "Lorry",
 
         "premium1": "Course Registration",
         "premium2": "Computer Test Registration",
@@ -143,6 +146,9 @@ const translations = {
         "esendi": "E (Lori Bersendi)",
         "psv": "PSV - Kenderaan Perkhidmatan Awam",
         "gdl": "GDL - Lesen Memandu Barang",
+        "motor": "Motosikal",
+        "car": "Motokar",
+        "lorry": "Lori",
 
         "premium1": "Pendaftaran Kursus",
         "premium2": "Pendaftaran Ujian Komputer",
