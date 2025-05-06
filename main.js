@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Pause on hover
   track.addEventListener('mouseenter', pauseAutoSlide);
   track.addEventListener('mouseleave', startAutoSlide);
-}
+}https://github.com/zahinazhar/driveright/blob/main/main.js
 
 // Initialize when DOM loads
 document.addEventListener('DOMContentLoaded', function() {
