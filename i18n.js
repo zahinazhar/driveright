@@ -213,13 +213,20 @@ const translations = {
 
 // Function to set the language
 function setLanguage(language) {
-    // Set all elements with data-i18n attribute
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[language] && translations[language][key]) {
-            element.textContent = translations[language][key];
-        }
-    });
+  // Existing text translations
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[language][key]) {
+      element.textContent = translations[language][key];
+    }
+  });
+
+  // Update image and alt text
+  const heroImg = document.getElementById('hero-image');
+  if (heroImg) {
+    heroImg.src = translations[language]["heroImage"];
+    heroImg.alt = translations[language]["heroAlt"];
+  }
     
     // Set all placeholder texts
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
