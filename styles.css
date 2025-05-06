@@ -360,7 +360,7 @@ nav {
 .price-card.selected {
   border: 2px solid #3498db !important;
   box-shadow: 0 0 15px rgba(52, 152, 219, 0.4) !important;
-  /*transform: translateY(-5px);*/
+  transform: translateY(-5px);
 }
 
 .popular-badge {
@@ -420,7 +420,8 @@ nav {
   overflow: hidden;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2 rem auto;
+  touch-action: pan-y;
 }
 
 .carousel-track {
