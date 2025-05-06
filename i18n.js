@@ -213,13 +213,13 @@ const translations = {
 
 // Function to set the language
 function setLanguage(language) {
-  // Existing text translations
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[language][key]) {
-      element.textContent = translations[language][key];
-    }
-  });
+    // Set all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[language] && translations[language][key]) {
+            element.textContent = translations[language][key];
+        }
+    });
 
   // Update image and alt text
   const heroImg = document.getElementById('hero-image');
