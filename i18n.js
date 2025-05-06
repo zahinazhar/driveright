@@ -11,7 +11,7 @@ const translations = {
         "heroTitle": "Get Your Driving License Today",
         "heroText": "Professional guidance through every step of the process. Fast, reliable, and stress-free.",
         "getStarted": "Get Started Today",
-        "heroImage": "images/hero-en.jpg",
+        "heroImage": "images/hero-en.png",
         "heroAlt": "Let's Enroll Now"
         
         // Benefits
@@ -115,7 +115,7 @@ const translations = {
         "heroTitle": "Dapatkan Lesen Memandu Anda Hari Ini",
         "heroText": "Bimbingan profesional melalui setiap langkah proses. Pantas, boleh dipercayai, dan tanpa tekanan.",
         "getStarted": "Mulakan Hari Ini",
-        "heroImage": "images/hero-ms.jpg",
+        "heroImage": "images/hero-ms.png",
         "heroAlt": "Jom Daftar Sekarang"
         
         // Benefits
