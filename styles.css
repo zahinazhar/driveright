@@ -12,6 +12,18 @@
     --transition: all 0.3s ease;
 }
 
+/* Smooth scrolling for the entire site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix for Safari */
+@supports (-webkit-touch-callout: none) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 * {
     margin: 0;
     padding: 0;
