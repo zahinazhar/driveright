@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ======================
 // PACKAGE SELECTION (UPDATED)
 // ======================
-document.querySelectorAll('.price-card').forEach(card => {
+/*document.querySelectorAll('.price-card').forEach(card => {
   card.addEventListener('click', function(e) {
     // Get package type from card's data attribute
     const packageType = this.getAttribute('data-package');
@@ -91,6 +91,35 @@ document.querySelectorAll('.price-card').forEach(card => {
       // Optional: Scroll to form
       document.querySelector('#contact')?.scrollIntoView({ 
         behavior: 'smooth' 
+      });
+    }
+  });
+});*/
+
+  document.querySelectorAll('.price-card, .select-package').forEach(element => {
+  element.addEventListener('click', function(e) {
+    e.preventDefault();
+    const packageType = this.dataset.package;
+    const select = document.getElementById('package-select');
+    
+    if (select) {
+      // Find and select the matching option
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value === packageType) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      
+      // Highlight selected card
+      document.querySelectorAll('.price-card').forEach(card => {
+        card.classList.remove('selected');
+      });
+      this.closest('.price-card')?.classList.add('selected');
+      
+      // Scroll to form
+      document.getElementById('contact')?.scrollIntoView({
+        behavior: 'smooth'
       });
     }
   });
@@ -198,7 +227,7 @@ document.querySelectorAll('.price-card').forEach(card => {
 // ======================
 // TESTIMONIAL CAROUSEL (UPDATED)
 // ======================
-function initCarousel() {
+/*function initCarousel() {
   const track = document.querySelector('.carousel-track');
   const slides = document.querySelectorAll('.carousel-slide');
   const nextBtn = document.querySelector('.next-btn');
@@ -300,7 +329,94 @@ document.addEventListener('DOMContentLoaded', function() {
   // ... (other initialization code)
   
   initCarousel(); // Add this line to initialize carousel
-});
+});*/
+
+  // TESTIMONIAL CAROUSEL
+function initCarousel() {
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const nextBtn = document.querySelector('.next-btn');
+  const prevBtn = document.querySelector('.prev-btn');
+  
+  if (!track || slides.length <= 1) {
+    if (nextBtn) nextBtn.style.display = 'none';
+    if (prevBtn) prevBtn.style.display = 'none';
+    return;
+  }
+
+  // Clone first and last slides
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+  firstClone.classList.add('clone');
+  lastClone.classList.add('clone');
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, slides[0]);
+
+  let currentIndex = 0;
+  let isAnimating = false;
+  const slideCount = slides.length;
+  const slideWidth = 100; // Percentage
+
+  function updateCarousel() {
+    track.style.transform = translateX(-${(currentIndex + 1) * slideWidth}%);
+  }
+
+  function goToSlide(index) {
+    if (isAnimating) return;
+    isAnimating = true;
+    currentIndex = index;
+    track.style.transition = 'transform 0.5s ease';
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    goToSlide((currentIndex + 1) % slideCount);
+  }
+
+  function prevSlide() {
+    goToSlide((currentIndex - 1 + slideCount) % slideCount);
+  }
+
+  // Handle infinite loop
+  track.addEventListener('transitionend', () => {
+    isAnimating = false;
+    if (currentIndex >= slideCount) {
+      track.style.transition = 'none';
+      currentIndex = 0;
+      updateCarousel();
+    } else if (currentIndex < 0) {
+      track.style.transition = 'none';
+      currentIndex = slideCount - 1;
+      updateCarousel();
+    }
+  });
+
+  // Button controls
+  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+  // Touch support
+  let startX = 0;
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchmove', (e) => {
+    if (!startX) return;
+    const currentX = e.touches[0].clientX;
+    const diff = startX - currentX;
+    
+    if (Math.abs(diff) > 50) { // Minimum swipe distance
+      diff > 0 ? nextSlide() : prevSlide();
+      startX = 0;
+    }
+  }, { passive: true });
+
+  // Initialize
+  track.style.transform = translateX(-${slideWidth}%);
+}
+
+document.addEventListener('DOMContentLoaded', initCarousel);
 
   // ======================
   // 5. HEADER SHADOW ON SCROLL
