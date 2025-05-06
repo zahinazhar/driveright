@@ -358,9 +358,9 @@ nav {
 }
 
 .price-card.selected {
-  border: 2px solid var(--secondary-color);
-  box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
-  transform: translateY(-5px);
+  border: 2px solid #3498db !important;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.4) !important;
+  /*transform: translateY(-5px);*/
 }
 
 .popular-badge {
@@ -418,17 +418,15 @@ nav {
 .testimonial-carousel {
   position: relative;
   overflow: hidden;
-  margin: 2rem auto;
+  width: 100%;
   max-width: 800px;
-  touch-action: pan-y;
+  margin: 0 auto;
 }
 
 .carousel-track {
   display: flex;
   width: 100%;
   transition: transform 0.5s ease;
-  cursor: grab;
-  user-select: none;
 }
 
 .carousel-track:active {
@@ -482,7 +480,7 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--secondary-color);
+  background: rgba(52, 152, 219, 0.7);
   color: white;
   border: none;
   border-radius: 50%;
@@ -490,9 +488,7 @@ nav {
   height: 40px;
   cursor: pointer;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1rem;
 }
 
 .carousel-btn:hover {
@@ -501,11 +497,11 @@ nav {
 }
 
 .prev-btn {
-  left: 10px;
+  left: 15px;
 }
 
 .next-btn {
-  right: 10px;
+  right: 15px;
 }
 
 /* ====================== */
