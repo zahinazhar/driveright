@@ -370,6 +370,13 @@ nav {
     left: 0;
 }
 
+.price-card.selected {
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  transform: translateY(-5px);
+  animation: pulse 1.5s ease infinite;
+}
+
 /* Testimonials Section */
 .testimonials {
     padding: 5rem 0;
@@ -689,10 +696,6 @@ footer {
   100% { transform: translateY(-5px); }
 }
 
-.price-card.selected {
-  animation: pulse 1.5s ease infinite;
-}
-
 /* Maintain popular badge visibility */
 .price-card.popular.selected {
   border-color: var(--accent-color);
@@ -775,6 +778,11 @@ footer {
 /* Hide scrollbars */
 .carousel-track::-webkit-scrollbar {
     display: none;
+}
+
+/* Carousel clones */
+.carousel-slide.clone {
+  visibility: hidden;
 }
 
 /* Mobile Responsiveness */
