@@ -195,6 +195,11 @@ nav {
 .hero-image img {
     border-radius: 10px;
     box-shadow: var(--shadow);
+    transition: opacity 0.3s ease;
+}
+
+.hero-image img.fade-out {
+  opacity: 0;
 }
 
 /* Benefits Section */
@@ -691,12 +696,4 @@ footer {
 #logo-link:hover {
   color: var(--secondary-color);
   transform: scale(1.05);
-}
-
-.hero-image img {
-  transition: opacity 0.3s ease;
-}
-
-.hero-image img.fade-out {
-  opacity: 0;
 }
