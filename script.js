@@ -141,3 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
     selectedCard.classList.add('selected');
   }
 });
+
+
+// Smooth scroll to top when logo is clicked
+document.getElementById('logo-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
