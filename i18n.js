@@ -74,6 +74,7 @@ const translations = {
         "testimonial1": "\"I got my license faster than my friends taken at other places. Worth every penny!\"",
         "testimonial2": "\"The instructors were patient and knowledgeable. Passed my test on the first try!\"",
         "testimonial3": "\"The paperwork assistance alone was worth it. So much less stressful than doing it myself.\"",
+        "testimonial4": "\"I asked a lot of questions to the teacher who pick me up and he was willing to answer my questions.\"",
         
         // Contact
         "readyToStart": "Ready to Get Started?",
@@ -179,6 +180,7 @@ const translations = {
         "testimonial1": "\"Saya dapat lesen lebih cepat berbanding dengan kawan saya yang buat di tempat lain. Sangat berbaloi!\"",
         "testimonial2": "\"Pengajar sangat sabar dan berpengetahuan. Lulus ujian pada percubaan pertama!\"",
         "testimonial3": "\"Bantuan dokumen sahaja sudah berbaloi. Jauh kurang stres berbanding buat sendiri.\"",
+        "testimonial4": "\"Saya banyak bertanya pada cikgu yang membawa saya dan dia sudi menjawab soalan saya.\"",
         
         // Contact
         "readyToStart": "Sedia Untuk Bermula?",
