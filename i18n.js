@@ -79,6 +79,7 @@ const translations = {
         // Contact
         "readyToStart": "Ready to Get Started?",
         "contactUs": "Contact Us",
+        "jpj": "JPJ Test Location",
         "yourName": "Your Name",
         "yourEmail": "Your Email",
         "yourPhone": "Your Phone",
@@ -176,6 +177,7 @@ const translations = {
         // Contact
         "readyToStart": "Sedia Untuk Bermula?",
         "contactUs": "Hubungi Kami",
+        "jpj": "Lokasi Ujian JPJ",
         "yourName": "Nama Anda",
         "yourEmail": "Emel Anda",
         "yourPhone": "Telefon Anda",
