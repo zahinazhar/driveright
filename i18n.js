@@ -79,8 +79,8 @@ const translations = {
         // Contact
         "readyToStart": "Ready to Get Started?",
         "contactUs": "Contact Us",
-        "phone": "(011) 5622 5263",
-        "phone": "(019) 655 0285",
+        "phone1": "(011) 5622 5263",
+        "phone2": "(019) 655 0285",
         "email": "info@driveright.com",
         "address1": "Akademi Memandu Gabungan Dunia",
         "address2": "Lot 3204, Jalan Sungai Yu 9/2, Jalan Kampung India Sungai Yu, 45500 Kuala Selangor, Selangor",
