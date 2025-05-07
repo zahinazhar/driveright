@@ -50,6 +50,7 @@ const translations = {
         "motor": "Motorcycle",
         "car": "Motorcar",
         "lorry": "Lorry",
+        "gdle": "*For E license class holder please contact for more information.",
         
         "standard1": "Course Registration",
         "standard2": "Computer Test Registration",
@@ -151,6 +152,7 @@ const translations = {
         "motor": "Motosikal",
         "car": "Motokar",
         "lorry": "Lori",
+        "gdle": "*Bagi pemegang kelas lesen E sila hubungi untuk maklumat lanjut.",
         
         "standard1": "Pendaftaran Kursus",
         "standard2": "Pendaftaran Ujian Komputer",
