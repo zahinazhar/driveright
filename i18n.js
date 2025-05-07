@@ -76,6 +76,10 @@ const translations = {
         "testimonial2": "\"The instructors were patient and knowledgeable. Passed my test on the first try!\"",
         "testimonial3": "\"The paperwork assistance alone was worth it. So much less stressful than doing it myself.\"",
         "testimonial4": "\"Loved the flexible scheduling—fit lessons around my work hours and still got my license faster than I expected!\"",
+        "testimonial5": "\"The mock driving tests were spot-on! By test day, I knew exactly what to expect and felt totally calm behind the wheel.\"",
+        Ujian memandu olok-olok adalah tepat! Menjelang hari ujian, saya tahu dengan tepat apa yang diharapkan dan berasa benar-benar tenang di belakang roda.
+    Walaupun sebagai seseorang yang gementar tentang pemanduan, pelajaran langkah demi langkah membina keyakinan saya. Sekarang saya seorang pemandu yang selamat dan berlesen. terima kasih!
+        "testimonial6": "\"Even as someone who was nervous about driving, the step-by-step lessons built my confidence. Now I’m a safe and licensed driver. Thank you!\"",
         
         // Contact
         "readyToStart": "Ready to Get Started?",
@@ -174,6 +178,8 @@ const translations = {
         "testimonial2": "\"Pengajar sangat sabar dan berpengetahuan. Lulus ujian pada percubaan pertama!\"",
         "testimonial3": "\"Bantuan dokumen sahaja sudah berbaloi. Jauh kurang stres berbanding buat sendiri.\"",
         "testimonial4": "\"Suka dengan jadual yang fleksibel. Pelajaran yang sesuai sekitar waktu kerja saya dan masih mendapat lesen saya lebih cepat daripada yang saya jangkakan!\"",
+        "testimonial5": "\"Latihan ujian memandu sangat tepat! Waktu hari ujian, saya tahu dengan tepat apa yang perlu dibuat dan berasa tenang.\"",
+        "testimonial6": "\"Walaupun terasa gementar untuk memandu, pelajaran langkah demi langkah membina keyakinan saya. Sekarang saya seorang pemandu yang selamat dan berlesen. Terima kasih!\"",
         
         // Contact
         "readyToStart": "Sedia Untuk Bermula?",
