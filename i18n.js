@@ -77,8 +77,6 @@ const translations = {
         "testimonial3": "\"The paperwork assistance alone was worth it. So much less stressful than doing it myself.\"",
         "testimonial4": "\"Loved the flexible scheduling—fit lessons around my work hours and still got my license faster than I expected!\"",
         "testimonial5": "\"The mock driving tests were spot-on! By test day, I knew exactly what to expect and felt totally calm behind the wheel.\"",
-        Ujian memandu olok-olok adalah tepat! Menjelang hari ujian, saya tahu dengan tepat apa yang diharapkan dan berasa benar-benar tenang di belakang roda.
-    Walaupun sebagai seseorang yang gementar tentang pemanduan, pelajaran langkah demi langkah membina keyakinan saya. Sekarang saya seorang pemandu yang selamat dan berlesen. terima kasih!
         "testimonial6": "\"Even as someone who was nervous about driving, the step-by-step lessons built my confidence. Now I’m a safe and licensed driver. Thank you!\"",
         
         // Contact
