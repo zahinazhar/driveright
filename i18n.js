@@ -38,6 +38,19 @@ const translations = {
         
         // Pricing
         "affordablePackages": "License Class",
+
+        "b2": "B2",
+        "bfull": "B Full",
+        "d": "D (Manual)",
+        "da": "D (Auto)",
+        "ekejur": "E (Rigid)",
+        "esendi": "E (Articulated)",
+        "psv": "PSV - Public Service Vehicle",
+        "gdl": "GDL - Goods Driving License",
+        "motor": "Motorcycle",
+        "car": "Motorcar",
+        "lorry": "Lorry",
+        
         "standard1": "Course Registration",
         "standard2": "Computer Test Registration",
         "standard3": "L License",
@@ -65,16 +78,15 @@ const translations = {
         // Contact
         "readyToStart": "Ready to Get Started?",
         "contactUs": "Contact Us",
-        "phone": "(555) 123-4567",
+        "phone": "(011) 5622 5263",
+        "phone": "(019) 655 0285",
         "email": "info@driveright.com",
-        "address": "123 Drive Street, Cityville",
+        "address1": "Akademi Memandu Gabungan Dunia",
+        "address2": "Lot 3204, Jalan Sungai Yu 9/2, Jalan Kampung India Sungai Yu, 45500 Kuala Selangor, Selangor",
         "yourName": "Your Name",
         "yourEmail": "Your Email",
         "yourPhone": "Your Phone",
-        "selectPackage": "Select a Package",
-        "basicOption": "Basic",
-        "standardOption": "Standard",
-        "premiumOption": "Premium",
+        "selectPackage": "Select Class",
         "yourMessage": "Your Message",
         "submitApplication": "Submit Application",
         
@@ -87,7 +99,7 @@ const translations = {
         "legal": "Legal",
         "terms": "Terms of Service",
         "privacy": "Privacy Policy",
-        "copyright": "© 2023 DriveRight. All rights reserved."
+        "copyright": "© 2025 DriveRight. All rights reserved."
     },
     ms: {
         // Header
@@ -127,6 +139,19 @@ const translations = {
         
         // Pricing
         "affordablePackages": "Kelas Lesen",
+
+        "b2": "B2",
+        "bfull": "B Penuh",
+        "d": "D (Manual)",
+        "da": "D (Automatik)",
+        "ekejur": "E (Kejur)",
+        "esendi": "E (Bersendi)",
+        "psv": "PSV - Kenderaan Perkhidmatan Awam",
+        "gdl": "GDL - Lesen Memandu Barang",
+        "motor": "Motosikal",
+        "car": "Motokar",
+        "lorry": "Lori",
+        
         "standard1": "Pendaftaran Kursus",
         "standard2": "Pendaftaran Ujian Komputer",
         "standard3": "Lesen L",
@@ -154,16 +179,15 @@ const translations = {
         // Contact
         "readyToStart": "Sedia Untuk Bermula?",
         "contactUs": "Hubungi Kami",
-        "phone": "(555) 123-4567",
+        "phone1": "(011) 5622 5263",
+        "phone2": "(019) 655 0285",
         "email": "info@driveright.com",
-        "address": "123 Jalan Memandu, Bandaraya",
+        "address1": "Akademi Memandu Gabungan Dunia",
+        "address2": "Lot 3204, Jalan Sungai Yu 9/2, Jalan Kampung India Sungai Yu, 45500 Kuala Selangor, Selangor",
         "yourName": "Nama Anda",
         "yourEmail": "Emel Anda",
         "yourPhone": "Telefon Anda",
         "selectPackage": "Pilih Pakej",
-        "basicOption": "Asas",
-        "standardOption": "Standard",
-        "premiumOption": "Premium",
         "yourMessage": "Mesej Anda",
         "submitApplication": "Hantar Permohonan",
         
@@ -176,7 +200,7 @@ const translations = {
         "legal": "Undang-undang",
         "terms": "Terma Perkhidmatan",
         "privacy": "Dasar Privasi",
-        "copyright": "© 2023 DriveRight. Hak cipta terpelihara."
+        "copyright": "© 2025 DriveRight. Hak cipta terpelihara."
     }
 };
 
