@@ -75,6 +75,7 @@ const translations = {
         "testimonial1": "\"I got my license in half the time it would have taken me on my own. Worth every penny!\"",
         "testimonial2": "\"The instructors were patient and knowledgeable. Passed my test on the first try!\"",
         "testimonial3": "\"The paperwork assistance alone was worth it. So much less stressful than doing it myself.\"",
+        "testimonial4": "\"Loved the flexible scheduling—fit lessons around my work hours and still got my license faster than I expected!\"",
         
         // Contact
         "readyToStart": "Ready to Get Started?",
@@ -172,6 +173,7 @@ const translations = {
         "testimonial1": "\"Saya dapat lesen separuh masa berbanding buat sendiri. Bernilai setiap sen!\"",
         "testimonial2": "\"Pengajar sangat sabar dan berpengetahuan. Lulus ujian pada percubaan pertama!\"",
         "testimonial3": "\"Bantuan dokumen sahaja sudah berbaloi. Jauh kurang stres berbanding buat sendiri.\"",
+        "testimonial4": "\"Suka dengan jadual yang fleksibel. Pelajaran yang sesuai sekitar waktu kerja saya dan masih mendapat lesen saya lebih cepat daripada yang saya jangkakan!\"",
         
         // Contact
         "readyToStart": "Sedia Untuk Bermula?",
