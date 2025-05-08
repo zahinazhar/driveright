@@ -1,4 +1,5 @@
-/* Global Styles */
+/* == GLOBAL STYLES == */
+/*Variables for easy theme and consistency */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -12,12 +13,14 @@
     --transition: all 0.3s ease;
 }
 
+/* Base reset and box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Typography foundation */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -25,6 +28,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Reusable container for content */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -32,15 +36,15 @@ body {
     padding: 0 15px;
 }
 
+/* == TYPOGRAPHY == */
+/* Heading hierarchy with consistency spacing */
 h1, h2, h3, h4 {
     margin-bottom: 1rem;
     line-height: 1.2;
 }
-
 h1 {
     font-size: 2.5rem;
 }
-
 h2 {
     font-size: 2rem;
     text-align: center;
@@ -48,6 +52,7 @@ h2 {
     position: relative;
 }
 
+/* Underline for section headings */
 h2::after {
     content: '';
     display: block;
@@ -57,30 +62,30 @@ h2::after {
     margin: 0.5rem auto;
 }
 
+/* Paragraph and link styles */
 p {
     margin-bottom: 1rem;
 }
-
 a {
     text-decoration: none;
     color: var(--secondary-color);
     transition: var(--transition);
 }
-
 a:hover {
     color: var(--accent-color);
 }
 
+/* Element styles */
 img {
     max-width: 100%;
     height: auto;
 }
-
 ul {
     list-style: none;
 }
 
-/* Button Styles */
+/* == COMPONENTS == */
+/* Call-to-action battle */
 .cta-button {
     display: inline-block;
     background: var(--secondary-color);
@@ -93,7 +98,6 @@ ul {
     cursor: pointer;
     text-align: center;
 }
-
 .cta-button:hover {
     background: var(--accent-color);
     color: var(--white);
@@ -101,18 +105,20 @@ ul {
     box-shadow: var(--shadow);
 }
 
+/* Call-to-action battle */
 .cta-button.secondary {
     background: var(--white);
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
 }
-
 .cta-button.secondary:hover {
     background: var(--secondary-color);
     color: var(--white);
 }
 
-/* Header Styles */
+/* LAYOUT SECTIONS */
+/* Header and navigation (Fixed) */
+
 header {
     background: var(--white);
     box-shadow: var(--shadow);
@@ -122,7 +128,6 @@ header {
     z-index: 1000;
     padding: 1rem 0;
 }
-
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -135,35 +140,32 @@ header {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 #logo-link:hover {
   color: var(--secondary-color);
   transform: scale(1.05);
 }
 
+/* Main navigation */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .nav-links {
     display: flex;
 }
-
 .nav-links li {
     margin-left: 2rem;
 }
-
 .nav-links a {
     color: var(--dark-color);
     font-weight: 600;
 }
-
 .nav-links a:hover {
     color: var(--secondary-color);
 }
 
+/* Mobile menu toggle */
 .hamburger {
     font-size: 1.5rem;
     color: var(--dark-color);
@@ -176,57 +178,51 @@ nav {
     padding: 8rem 0 4rem;
     background: linear-gradient(135deg, var(--light-color) 0%, var(--white) 100%);
 }
-
 .hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .hero-content {
     flex: 1;
     padding-right: 2rem;
 }
-
 .hero-content h1 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
-
 .hero-content p {
     font-size: 1.2rem;
     color: var(--text-light);
     margin-bottom: 2rem;
 }
-
 .hero-image {
     flex: 1;
     text-align: center;
 }
-
 .hero-image img {
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: opacity 0.3s ease
 }
 
+/* Fade effect */
 .hero-image img.fade-out {
   opacity: 0;
 }
 
+/* == FEATURE SECTION == */
 /* Benefits Section */
 .benefits {
     padding: 5rem 0;
     background: var(--white);
 }
-
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
-
 .benefit-card {
     background: var(--light-color);
     padding: 2rem;
@@ -235,17 +231,16 @@ nav {
     transition: var(--transition);
 }
 
+/* Card with hover effect */
 .benefit-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow);
 }
-
 .benefit-card i {
     font-size: 3rem;
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
 }
-
 .benefit-card h3 {
     color: var(--primary-color);
 }
@@ -255,7 +250,6 @@ nav {
     padding: 5rem 0;
     background: var(--light-color);
 }
-
 .process-steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -263,6 +257,7 @@ nav {
     margin-top: 3rem;
 }
 
+/* Step with number */
 .step {
     background: var(--white);
     padding: 2rem;
@@ -271,12 +266,10 @@ nav {
     position: relative;
     transition: var(--transition);
 }
-
 .step:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow);
 }
-
 .step-number {
     width: 50px;
     height: 50px;
@@ -290,24 +283,21 @@ nav {
     font-weight: bold;
     margin: 0 auto 1.5rem;
 }
-
 .step h3 {
     color: var(--primary-color);
 }
 
-/* Pricing Section */
+/* == PRICING SECTION == */
 .pricing {
     padding: 5rem 0;
     background: var(--white);
 }
-
 .pricing-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
-
 .price-card {
     background: var(--light-color);
     padding: 2rem;
@@ -324,7 +314,6 @@ nav {
   transform: translateY(-5px);
   animation: pulse 1.5s ease infinite;
 }
-
 .price-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow);
@@ -336,7 +325,6 @@ nav {
   50% { transform: translateY(-8px); }
   100% { transform: translateY(-5px); }
 }
-
 
 /*.price-card.popular {
     border: 2px solid var(--secondary-color);
