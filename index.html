@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveRight - Get Your Driving License Today</title>
+
+	    <!-- Favicon -->    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	
+      <script src="https://unpkg.com/lucide@latest"></script>
+      <script>
+        lucide.createIcons();
+      </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem;
+            border-radius: 20px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            color: white;
+            border: none;
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .lang-btn.active:hover {
+            background: white;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .contact-quick {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .contact-quick a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .contact-quick a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e3a8a;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 1rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Features */
+        .features {
+            padding: 5rem 2rem;
+            background: #f8fafc;
+        }
+
+        /* License Classes */
+        .license-classes {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .license-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .license-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .license-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-color: #3b82f6;
+        }
+
+        .license-card.featured {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-color: #3b82f6;
+        }
+
+        .vocational-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+        }
+
+        .license-name span {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .license-note {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-style: italic;
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: #fef3c7;
+            border-radius: 8px;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .license-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .license-type {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .license-name {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #1e3a8a;
+            margin-bottom: 0;
+        }
+
+        .license-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+
+        .license-features li {
+            display: flex;
+            align-items: start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .license-features li i {
+            color: #3b82f6;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .btn-license {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: white;
+            color: #1e3a8a;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .btn-license:hover {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .license-card.featured .btn-license:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #1e3a8a;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Process */
+        .process {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .process-steps {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+            opacity: 0;
+            animation: fadeInLeft 0.6s ease-out forwards;
+        }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+        .step:nth-child(4) { animation-delay: 0.4s; }
+
+        .step-number {
+            min-width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .step-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #1e3a8a;
+        }
+
+        .step-content p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Stats */
+        .stats {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 5rem 2rem;
+            background: #f8fafc;
+        }
+
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            color: #1e3a8a;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item-content p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .contact-item-content a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            background: white;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-quick {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-end;
+                font-size: 0.85rem;
+            }
+
+            .header-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .lang-switcher {
+                order: -1;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i data-lucide="car"></i>
+                DriveRight
+            </div>
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" id="btn-en">EN</button>
+                    <button class="lang-btn" id="btn-ms">BM</button>
+                </div>
+                <div class="contact-quick">
+                    <a href="tel:01156225263">
+                        <i data-lucide="phone"></i>
+                        <span>(011) 5622 5263</span>
+                        <span>(ZAHIN)</span>
+                    </a>
+                    <a href="tel:0196550285">
+                        <i data-lucide="phone"></i>
+                        <span>(019) 655 0285</span>
+                        <span>(AZHAR)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-lang-en="Get Your Driving License Today!" data-lang-ms="Dapatkan Lesen Memandu Anda Hari Ini!">Get Your Driving License Today!</h1>
+            <p data-lang-en="Professional guidance through every step of the process. Fast, reliable, and stress-free." data-lang-ms="Bimbingan profesional melalui setiap langkah proses. Pantas, boleh dipercayai, dan bebas tekanan.">Professional guidance through every step of the process. Fast, reliable, and stress-free.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i data-lucide="calendar"></i>
+                    <span data-lang-en="Book Now" data-lang-ms="Tempah Sekarang">Book Now</span>
+                </a>
+                <a href="tel:01156225263" class="btn btn-secondary">
+                    <i data-lucide="phone-call"></i>
+                    <span data-lang-en="Call Us" data-lang-ms="Hubungi Kami">Call Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2 class="section-title" data-lang-en="Why Choose DriveRight?" data-lang-ms="Mengapa Pilih DriveRight?">Why Choose DriveRight?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="zap" size="40"></i>
+                </div>
+                <h3 data-lang-en="Fast Processing" data-lang-ms="Pemprosesan Pantas">Fast Processing</h3>
+                <p data-lang-en="We expedite the application process so you get your license quicker than standard methods." data-lang-ms="Kami mempercepatkan proses permohonan supaya anda mendapat lesen dengan lebih cepat daripada kaedah standard.">We expedite the application process so you get your license quicker than standard methods.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="users" size="40"></i>
+                </div>
+                <h3 data-lang-en="Expert Guidance" data-lang-ms="Bimbingan Pakar">Expert Guidance</h3>
+                <p data-lang-en="Our professionals guide you through every step, from paperwork to the driving test." data-lang-ms="Profesional kami membimbing anda melalui setiap langkah, dari kertas kerja hingga ujian memandu.">Our professionals guide you through every step, from paperwork to the driving test.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="award" size="40"></i>
+                </div>
+                <h3 data-lang-en="95% Success Rate" data-lang-ms="Kadar Kejayaan 95%">95% Success Rate</h3>
+                <p data-lang-en="95% of our clients pass their driving test on the first attempt with our preparation." data-lang-ms="95% daripada klien kami lulus ujian memandu pada percubaan pertama dengan persediaan kami.">95% of our clients pass their driving test on the first attempt with our preparation.</p>
+            </div>
+
+            <!-- <div class="feature-card">
+                <div class="feature-icon">
+                    <i data-lucide="headphones" size="40"></i>
+                </div>
+                <h3 data-lang-en="Dedicated Support" data-lang-ms="Sokongan Berdedikasi">Dedicated Support</h3>
+                <p data-lang-en="Have questions? Our support team is always ready to assist you throughout your journey." data-lang-ms="Ada soalan? Pasukan sokongan kami sentiasa bersedia membantu anda sepanjang perjalanan anda.">Have questions? Our support team is always ready to assist you throughout your journey.</p>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- License Classes -->
+    <section class="license-classes">
+        <h2 class="section-title" data-lang-en="License Classes" data-lang-ms="Kelas Lesen">License Classes</h2>
+        <div class="license-grid">
+            <!-- B2 Motorcycle -->
+            <div class="license-card">
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Motorcycle" data-lang-ms="Motosikal">Motorcycle</div>
+                    <h3 class="license-name">B2</h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Computer Test Registration" data-lang-ms="Pendaftaran Ujian Komputer">Computer Test Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="L License" data-lang-ms="Lesen L">L License</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Driving Learning Class" data-lang-ms="Kelas Pembelajaran Memandu">Driving Learning Class</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="QTI - Assessment" data-lang-ms="QTI - Penilaian">QTI - Assessment</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="JPJ Test" data-lang-ms="Ujian JPJ">JPJ Test</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="License P" data-lang-ms="Lesen P">License P</span></li>
+                </ul>
+                <a href="#contact" class="btn-license" data-license="B2">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div>
+
+            <!-- B Full Motorcycle -->
+            <!-- <div class="license-card">
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Motorcycle" data-lang-ms="Motosikal">Motorcycle</div>
+                    <h3 class="license-name">B Full</h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Computer Test Registration" data-lang-ms="Pendaftaran Ujian Komputer">Computer Test Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="L License" data-lang-ms="Lesen L">L License</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Driving Learning Class" data-lang-ms="Kelas Pembelajaran Memandu">Driving Learning Class</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="QTI - Assessment" data-lang-ms="QTI - Penilaian">QTI - Assessment</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="JPJ Test" data-lang-ms="Ujian JPJ">JPJ Test</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="License P" data-lang-ms="Lesen P">License P</span></li>
+                </ul>
+                <a href="#contact" class="btn-license">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div> -->
+
+            <!-- D Manual -->
+            <div class="license-card">
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Motorcar" data-lang-ms="Kereta">Motorcar</div>
+                    <h3 class="license-name">D (Manual)</h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Computer Test Registration" data-lang-ms="Pendaftaran Ujian Komputer">Computer Test Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="L License" data-lang-ms="Lesen L">L License</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Driving Learning Class" data-lang-ms="Kelas Pembelajaran Memandu">Driving Learning Class</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="QTI - Assessment" data-lang-ms="QTI - Penilaian">QTI - Assessment</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="JPJ Test" data-lang-ms="Ujian JPJ">JPJ Test</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="License P" data-lang-ms="Lesen P">License P</span></li>
+                </ul>
+                <a href="#contact" class="btn-license" data-license="D Manual">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div>
+
+            <!-- D Auto -->
+            <div class="license-card">
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Motorcar" data-lang-ms="Kereta">Motorcar</div>
+                    <h3 class="license-name">D (Auto)</h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Computer Test Registration" data-lang-ms="Pendaftaran Ujian Komputer">Computer Test Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="L License" data-lang-ms="Lesen L">L License</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Driving Learning Class" data-lang-ms="Kelas Pembelajaran Memandu">Driving Learning Class</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="QTI - Assessment" data-lang-ms="QTI - Penilaian">QTI - Assessment</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="JPJ Test" data-lang-ms="Ujian JPJ">JPJ Test</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="License P" data-lang-ms="Lesen P">License P</span></li>
+                </ul>
+                <a href="#contact" class="btn-license" data-license="D Auto">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div>
+
+            <!-- E Rigid -->
+            <div class="license-card">
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Lorry" data-lang-ms="Lori">Lorry</div>
+                    <h3 class="license-name" data-lang-en="E (Rigid)" data-lang-ms="E (Kejur)">E (Rigid)</h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Driving Learning Class" data-lang-ms="Kelas Pembelajaran Memandu">Driving Learning Class</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="QTI - Assessment" data-lang-ms="QTI - Penilaian">QTI - Assessment</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="JPJ Test" data-lang-ms="Ujian JPJ">JPJ Test</span></li>
+                </ul>
+                <a href="#contact" class="btn-license" data-license="E Rigid">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div>
+
+            <!-- E Articulated -->
+            <div class="license-card">
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Lorry" data-lang-ms="Lori">Lorry</div>
+                    <h3 class="license-name" data-lang-en="E (Articulated)" data-lang-ms="E (Bersendi)">E (Articulated)</h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Driving Learning Class" data-lang-ms="Kelas Pembelajaran Memandu">Driving Learning Class</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="QTI - Assessment" data-lang-ms="QTI - Penilaian">QTI - Assessment</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="JPJ Test" data-lang-ms="Ujian JPJ">JPJ Test</span></li>
+                </ul>
+                <a href="#contact" class="btn-license" data-license="E Articulated">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div>
+
+            <!-- PSV -->
+            <!-- <div class="license-card">
+                <div class="vocational-badge" data-lang-en="Vocational License" data-lang-ms="Lesen Vokasional">Vocational License</div>
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Taxi / E-Hailing / Bus / Van" data-lang-ms="Teksi / E-Hailing / Bas / Van">Taxi / E-Hailing / Bus / Van</div>
+                    <h3 class="license-name">PSV - <span data-lang-en="Public Service Vehicle" data-lang-ms="Kenderaan Perkhidmatan Awam">Public Service Vehicle</span></h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Vocational License" data-lang-ms="Lesen Vokasional">Vocational License</span></li>
+                </ul>
+                <a href="#contact" class="btn-license" data-license="PSV">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div> -->
+
+            <!-- GDL -->
+            <div class="license-card">
+                <div class="vocational-badge" data-lang-en="Vocational License" data-lang-ms="Lesen Vokasional">Vocational License</div>
+                <div class="license-header">
+                    <div class="license-type" data-lang-en="Lorry" data-lang-ms="Lori">Lorry</div>
+                    <h3 class="license-name">GDL - <span data-lang-en="Goods Driving License" data-lang-ms="Lesen Memandu Barang">Goods Driving License</span></h3>
+                </div>
+                <ul class="license-features">
+                    <li><i data-lucide="check"></i> <span data-lang-en="Course Registration" data-lang-ms="Pendaftaran Kursus">Course Registration</span></li>
+                    <li><i data-lucide="check"></i> <span data-lang-en="Vocational License" data-lang-ms="Lesen Vokasional">Vocational License</span></li>
+                </ul>
+                <b><p class="license-note">*<span data-lang-en="For E license class holder please contact for more information." data-lang-ms="Untuk pemegang lesen kelas E sila hubungi untuk maklumat lanjut.">For E license class holder please contact for more information.</span></p></b>
+                <a href="#contact" class="btn-license" data-license="GDL">
+                    <span data-lang-en="Choose" data-lang-ms="Pilih">Choose</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>95%</h3>
+                <p data-lang-en="First-Time Pass Rate" data-lang-ms="Kadar Lulus Percubaan Pertama">First-Time Pass Rate</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p data-lang-en="Students Trained" data-lang-ms="Pelajar Terlatih">Students Trained</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p data-lang-en="Years Experience" data-lang-ms="Tahun Pengalaman">Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>5★</h3>
+                <p data-lang-en="Customer Rating" data-lang-ms="Penilaian Pelanggan">Customer Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <h2 class="section-title" data-lang-en="Our Simple 4-Step Process" data-lang-ms="Proses Mudah 4 Langkah Kami">Our Simple 4-Step Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3 data-lang-en="Initial Assessment" data-lang-ms="Penilaian Awal">Initial Assessment</h3>
+                    <p data-lang-en="We assess your needs and create a personalized plan for your license application." data-lang-ms="Kami menilai keperluan anda dan membuat pelan peribadi untuk permohonan lesen anda.">We assess your needs and create a personalized plan for your license application.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3 data-lang-en="Document Preparation" data-lang-ms="Penyediaan Dokumen">Document Preparation</h3>
+                    <p data-lang-en="We help gather and prepare all necessary documents for a smooth application." data-lang-ms="Kami membantu mengumpul dan menyediakan semua dokumen yang diperlukan untuk permohonan yang lancar.">We help gather and prepare all necessary documents for a smooth application.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3 data-lang-en="Training & Testing" data-lang-ms="Latihan & Ujian">Training & Testing</h3>
+                    <p data-lang-en="Professional instructors prepares you for the practical tests." data-lang-ms="Jurulatih profesional menyediakan anda untuk ujian praktikal.">Professional instructors prepares you for the practical tests.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3 data-lang-en="License Issuance" data-lang-ms="Pengeluaran Lesen">License Issuance</h3>
+                    <p data-lang-en="We accompany you to the final steps to ensure you receive your license successfully." data-lang-ms="Kami menemani anda ke langkah terakhir untuk memastikan anda menerima lesen dengan jayanya.">We accompany you to the final steps to ensure you receive your license successfully.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong data-lang-en="Note:" data-lang-ms="Nota:">Note:</strong> &bull; <span data-lang-en="For Malaysian citizens, the license will only be available through the MyJPJ app." data-lang-ms="Untuk warganegara, lesen akan diperoleh melalui aplikasi MyJPJ sahaja.">For Malaysian citizens, the license will only be available through the MyJPJ app.</span>
+<br>
+&emsp;&emsp;&ensp;&nbsp;&bull;
+	  <span data-lang-en="A physical license is only issued to non-citizens." data-lang-ms="Lesen fizikal hanya diberikan kepada bukan warganegara.">A physical license is only issued to non-citizens.</span>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="section-title" data-lang-en="Get In Touch" data-lang-ms="Hubungi Kami">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3 style="color: #1e3a8a; margin-bottom: 2rem;" data-lang-en="Contact Information" data-lang-ms="Maklumat Hubungan">Contact Information</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <div class="contact-item-content">
+                        <h4 data-lang-en="Phone Numbers" data-lang-ms="Nombor Telefon">Phone Numbers</h4>
+                        <p><a href="tel:01156225263">(011) 5622 5263 (ZAHIN)</a></p>
+                        <p><a href="tel:0196550285">(019) 655 0285 &ensp;(AZHAR)</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <div class="contact-item-content">
+                        <h4 data-lang-en="Email" data-lang-ms="Emel">Email</h4>
+                        <p><a href="mailto:driveright.info@gmail.com">driveright.info@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="contact-item-content">
+                        <h4 data-lang-en="Location" data-lang-ms="Lokasi">Location</h4>
+                        <p>Akademi Memandu Gabungan Dunia<br>
+                        Lot 3204, Jalan Sungai Yu 9/2,<br>
+                        Jalan Kampung India Sungai Yu,<br>
+                        45500 Kuala Selangor, Selangor</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="color: #1e3a8a; margin-bottom: 1.5rem;" data-lang-en="Send Us a Message" data-lang-ms="Hantar Mesej Kepada Kami">Send Us a Message</h3>
+                <form action="https://formspree.io/f/mzzrgegv" method="POST">
+                    <div class="form-group">
+                        <label data-lang-en="Your Name" data-lang-ms="Nama Anda">Your Name</label>
+                        <input type="text" name="full_name" data-lang-en-placeholder="Enter your name" data-lang-ms-placeholder="Masukkan nama anda" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-lang-en="Phone Number" data-lang-ms="Nombor Telefon">Phone Number</label>
+                        <input type="tel" name="phone" data-lang-en-placeholder="Enter your phone" data-lang-ms-placeholder="Masukkan nombor telefon anda" placeholder="Enter your phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-lang-en="License Type" data-lang-ms="Jenis Lesen">License Type</label>
+                        <select name="license" id="license-select" required>
+                            <option value="" data-lang-en="Select license type" data-lang-ms="Pilih jenis lesen">Select license type</option>
+                            <option value="B2" data-lang-en="B2 - Motorcycle" data-lang-ms="B2 - Motosikal">B2 - Motorcycle</option>
+                            <!-- <option value="B Full">B Full - Motorcycle</option> -->
+                            <option value="D Manual" data-lang-en="D (Manual) - Motorcar" data-lang-ms="D (Manual) - Kereta">D (Manual) - Motorcar</option>
+                            <option value="D Auto" data-lang-en="D (Auto) - Motorcar" data-lang-ms="D (Auto) - Kereta">D (Auto) - Motorcar</option>
+                            <option value="E Rigid" data-lang-en="E (Rigid) - Lorry" data-lang-ms="E (Kejur) - Lori">E (Rigid) - Lorry</option>
+                            <option value="E Articulated" data-lang-en="E (Articulated) - Lorry" data-lang-ms="E (Bersendi) - Lori">E (Articulated) - Lorry</option>
+                            <!-- <option value="PSV">PSV - Public Service Vehicle</option> -->
+                            <option value="GDL" data-lang-en="GDL - Goods Driving License" data-lang-ms="GDL - Lesen Memandu Barang">GDL - Goods Driving License</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-lang-en="Message" data-lang-ms="Mesej">Message</label>
+                        <textarea name="message" data-lang-en-placeholder="Tell us how we can help you..." data-lang-ms-placeholder="Beritahu kami bagaimana kami boleh membantu anda..." placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i data-lucide="send"></i>
+                        <span data-lang-en="Send Message" data-lang-ms="Hantar Mesej">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/601156225263" class="btn-whatsapp" target="_blank">
+        <i data-lucide="message-circle" size="28"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Axiowise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            console.log('Switching to:', lang);
+            currentLang = lang;
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (lang === 'en') {
+                document.getElementById('btn-en').classList.add('active');
+            } else {
+                document.getElementById('btn-ms').classList.add('active');
+            }
+
+            // Update all text elements
+            document.querySelectorAll('[data-lang-en]').forEach(element => {
+                const newText = element.getAttribute('data-lang-' + lang);
+                if (newText) {
+                    // Check if element contains an icon
+                    const icon = element.querySelector('i[data-lucide]');
+                    if (icon) {
+                        // Store icon info
+                        const iconName = icon.getAttribute('data-lucide');
+                        const iconSize = icon.getAttribute('width') || '24';
+                        // Update with new text and recreate icon
+                        element.innerHTML = '<i data-lucide="' + iconName + '" width="' + iconSize + '" height="' + iconSize + '"></i> ' + newText;
+                    } else {
+                        element.textContent = newText;
+                    }
+                }
+            });
+
+            // Update form placeholders
+            document.querySelectorAll('input, textarea').forEach(element => {
+                const placeholderAttr = 'data-lang-' + lang + '-placeholder';
+                const newPlaceholder = element.getAttribute(placeholderAttr);
+                if (newPlaceholder) {
+                    element.placeholder = newPlaceholder;
+                }
+            });
+
+            // Update select dropdown first option
+            const selectElement = document.getElementById('license-select');
+            if (selectElement) {
+                const firstOption = selectElement.querySelector('option[value=""]');
+                if (firstOption) {
+                    const selectText = firstOption.getAttribute('data-lang-' + lang);
+                    if (selectText) {
+                        firstOption.textContent = selectText;
+                    }
+                }
+            }
+
+            // Re-initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Add event listeners to language buttons
+            const btnEn = document.getElementById('btn-en');
+            const btnMs = document.getElementById('btn-ms');
+            
+            if (btnEn) {
+                btnEn.addEventListener('click', function() {
+                    switchLanguage('en');
+                });
+            }
+
+            if (btnMs) {
+                btnMs.addEventListener('click', function() {
+                    switchLanguage('ms');
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // License selection functionality
+            document.querySelectorAll('.btn-license').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const licenseType = this.getAttribute('data-license');
+                    const selectElement = document.getElementById('license-select');
+                    
+                    if (licenseType && selectElement) {
+                        // Set the dropdown value
+                        selectElement.value = licenseType;
+                        
+                        // Scroll to contact section
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                            contactSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                        
+                        // Optional: Add a brief highlight effect to the dropdown
+                        selectElement.style.borderColor = '#3b82f6';
+                        selectElement.style.boxShadow = '0 0 0 3px rgba(59, 130, 246, 0.2)';
+                        setTimeout(() => {
+                            selectElement.style.borderColor = '#e2e8f0';
+                            selectElement.style.boxShadow = 'none';
+                        }, 1500);
+                    }
+                });
+            });
+
+            // Form submission handler
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    // Formspree will handle the submission
+                    // Show a loading state or confirmation message
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.querySelector('span').textContent;
+                    submitBtn.querySelector('span').textContent = currentLang === 'en' ? 'Sending...' : 'Menghantar...';
+                    submitBtn.disabled = true;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
